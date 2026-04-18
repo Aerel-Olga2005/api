@@ -15,9 +15,11 @@ class MobileBankApiTestV3 {
                 .baseUri("http://localhost:9999/api/v1")
                 // Выполняемые действия
                 .when()
+                .log().all()
                 .get("/demo/accounts")
                 // Проверки
                 .then()
+                .log().all()
                 .statusCode(200)
                 // специализированные проверки - лучше
                 .contentType(ContentType.JSON)

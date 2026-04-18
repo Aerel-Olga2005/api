@@ -26,9 +26,11 @@ class MobileBankApiTestV6 {
                 .spec(requestSpec) // со спецификацией проще (особенно когда много тестов)
                 // Выполняемые действия
                 .when()
+                .log().all()
                 .get("/demo/accounts")
                 // Проверки
                 .then()
+                .log().all()
                 .statusCode(200);
     }
 }
